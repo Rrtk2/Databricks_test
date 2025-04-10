@@ -16,6 +16,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("-num_of_samples", type=int, default=100, help="Number of synthetic samples to generate per class")
 args = parser.parse_args()
+print("No. of samples per class:", args.num_of_samples)
 
 # -------------------------
 # Imports
