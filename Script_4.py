@@ -1,19 +1,4 @@
 #!/usr/bin/env python
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef, 
-                             roc_auc_score, confusion_matrix, roc_curve)
-import joblib #%pip install joblib
-import xlsxwriter # is used latrr for saving to Excel
-
-# -------------------------
-# Imports
-# -------------------------
-synthetic_df = joblib.load('synthetic_df.pkl')
-X = joblib.load('X.pkl')
-y = joblib.load('y.pkl')
 
 
 
@@ -42,6 +27,25 @@ args = parser.parse_args()
 if not install_requirements(args.file):
     sys.exit(1)
 print("Installation completed successfully.")    
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef, 
+                             roc_auc_score, confusion_matrix, roc_curve)
+import joblib #%pip install joblib
+import xlsxwriter # is used latrr for saving to Excel
+
+# -------------------------
+# Imports
+# -------------------------
+synthetic_df = joblib.load('synthetic_df.pkl')
+X = joblib.load('X.pkl')
+y = joblib.load('y.pkl')
+
+
 
 # -------------------------
 # Step 8 (Improved): Train a classifier using Repeated Stratified K-Fold cross validation 
