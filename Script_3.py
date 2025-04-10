@@ -1,5 +1,11 @@
 #!/usr/bin/env python
-
+from sklearn.decomposition import PCA
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+import pandas as pd
+import joblib #%pip install joblib
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef, 
+                             roc_auc_score, confusion_matrix, roc_curve)
 # -------------------------
 # Step 7 (Improved): Generate synthetic samples with a multivariate approach
 # -------------------------
@@ -68,7 +74,7 @@ print(f"Saved PCA plot to {pca_plot_path}")
 # Step X: Combined PCA plot (original vs synthetic, different markers)
 # Use the original PCA (saved from full-feature PCA) to project synthetic samples.
 # -------------------------
-import joblib
+
 
 # Load the original PCA object
 pca_original = joblib.load('pca_object.pkl')

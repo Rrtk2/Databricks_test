@@ -1,5 +1,10 @@
 #!/usr/bin/env python
-
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef, 
+                             roc_auc_score, confusion_matrix, roc_curve)
 # -------------------------
 # Step 8 (Improved): Train a classifier using Repeated Stratified K-Fold cross validation 
 # and then use the trained model to predict synthetic samples.

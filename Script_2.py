@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+from sklearn.decomposition import PCA
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+import pandas as pd
+import joblib #%pip install joblib
+
 # -------------------------
 # Step 1: Load iris dataset and save to CSV
 # -------------------------
