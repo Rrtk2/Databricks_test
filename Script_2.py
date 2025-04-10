@@ -90,3 +90,10 @@ print(f"Saved PCA plot (significant features) to {pca_sig_plot_path}")
 pca_object_path = 'pca_object.pkl'
 joblib.dump(pca, pca_object_path)
 print(f"Saved PCA object to {pca_object_path}")
+
+# -------------------------
+# Exports
+# -------------------------
+joblib.dump(X,'X.pkl')
+joblib.dump(y, 'y.pkl')
+joblib.dump(iris, 'iris.pkl')

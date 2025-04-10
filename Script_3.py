@@ -3,9 +3,23 @@ from sklearn.decomposition import PCA
 from sklearn.datasets import load_iris
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 import joblib #%pip install joblib
 from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef, 
                              roc_auc_score, confusion_matrix, roc_curve)
+
+
+# -------------------------
+# Imports
+# -------------------------
+X = joblib.load('X.pkl')
+y = joblib.load('y.pkl')
+iris = joblib.load('iris.pkl')
+
+
+
+
+
 # -------------------------
 # Step 7 (Improved): Generate synthetic samples with a multivariate approach
 # -------------------------
@@ -133,3 +147,7 @@ plt.close()
 print(f"Saved combined PCA plot to {combined_pca_plot_path}")
 
 
+# -------------------------
+# Exports
+# -------------------------
+joblib.dump(synthetic_df,'synthetic_df.pkl')

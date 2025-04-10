@@ -5,6 +5,19 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef, 
                              roc_auc_score, confusion_matrix, roc_curve)
+import joblib #%pip install joblib
+
+
+# -------------------------
+# Imports
+# -------------------------
+synthetic_df = joblib.load('synthetic_df.pkl')
+X = joblib.load('X.pkl')
+y = joblib.load('y.pkl')
+
+
+
+
 # -------------------------
 # Step 8 (Improved): Train a classifier using Repeated Stratified K-Fold cross validation 
 # and then use the trained model to predict synthetic samples.
