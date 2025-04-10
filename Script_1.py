@@ -25,3 +25,9 @@ if not install_requirements(args.file):
     sys.exit(1)
 print("Installation completed successfully.")    
 
+# Set a default if no argument is provided.
+print(sys.argv)
+num_samples = int(sys.argv[1]) if len(sys.argv) > 1 else 100
+
+# Use num_samples in your synthetic data generation
+print(f"Generating {num_samples} synthetic samples")
