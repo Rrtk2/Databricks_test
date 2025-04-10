@@ -19,15 +19,11 @@ def install_requirements(req_file):
     
 parser = argparse.ArgumentParser(description="Install packages from a requirements file.")
 parser.add_argument("-f", "--file", default="requirements.txt", help="Path to requirements file")
+parser.add_argument("--noSamples", type=int, default=1000, help="Number of samples to generate")
 args = parser.parse_args()
 
 if not install_requirements(args.file):
     sys.exit(1)
 print("Installation completed successfully.")    
 
-# Set a default if no argument is provided.
-print(sys.argv)
-num_samples = int(sys.argv[1]) if len(sys.argv) > 1 else 100
-
-# Use num_samples in your synthetic data generation
-print(f"Generating {num_samples} synthetic samples")
+print("No. of samples:", args.noSamples)
