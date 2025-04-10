@@ -10,6 +10,14 @@ from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef,
 
 
 # -------------------------
+# argparse
+# -------------------------
+import argparse    
+parser = argparse.ArgumentParser()
+parser.add_argument("-num_of_samples", type=int, default=100, help="Number of synthetic samples to generate per class")
+args = parser.parse_args()
+
+# -------------------------
 # Imports
 # -------------------------
 X = joblib.load('X.pkl')
@@ -24,7 +32,7 @@ iris = joblib.load('iris.pkl')
 # Step 7 (Improved): Generate synthetic samples with a multivariate approach
 # -------------------------
 
-num_samples_per_class = 100
+num_samples_per_class = args.num_of_samples
 synthetic_samples = []
 
 # We’ll sample from the empirical mean and covariance for each class in the *entire* feature set.
