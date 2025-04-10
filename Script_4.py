@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import matplotlib.pyplot as plt
-import statsmodels.api as sm
 import pandas as pd
+import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (accuracy_score, f1_score, matthews_corrcoef, 
                              roc_auc_score, confusion_matrix, roc_curve)
